@@ -1,16 +1,21 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import Spinner from "../components/Spinner/Spinner";
 
 // Action de redux
 import { crearNuevoProductoAction } from "../actions/productActions";
 
-const NewProduct = () => {
+const NewProduct = ({ history }) => {
   // state del componente
   const [nombre, guardarNombre] = useState("");
   const [precio, guardarPrecio] = useState(0);
 
   // utilizar useDispatch y tcrea una funcion
   const dispatch = useDispatch();
+
+  // Acceder al state del store
+  const cargando = useSelector((state) => state.products.loading);
+  const error = useSelector((state) => state.products.error);
 
   // Llamar el action de productActions
   const agregarProducto = (producto) =>
@@ -30,6 +35,9 @@ const NewProduct = () => {
       nombre,
       precio,
     });
+
+    // redireccionar
+    history.push("/");
   };
 
   return (
@@ -70,6 +78,12 @@ const NewProduct = () => {
                 Agregar
               </button>
             </form>
+            {cargando ? <Spinner /> : null}
+            {error ? (
+              <p className="alert alert-danger p2 mt-4 text-center">
+                Hubo un error
+              </p>
+            ) : null}
           </div>
         </div>
       </div>

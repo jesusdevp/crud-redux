@@ -24,6 +24,36 @@
       "nombre": "Jugo de Fresa",
       "precio": "200",
       "id": 5
+    },
+    {
+      "nombre": "Uvas",
+      "precio": 455,
+      "id": 6
+    },
+    {
+      "nombre": "Uvas",
+      "precio": 122,
+      "id": 7
+    },
+    {
+      "nombre": "Uvas",
+      "precio": 122,
+      "id": 8
+    },
+    {
+      "nombre": "tequila",
+      "precio": 222,
+      "id": 9
+    },
+    {
+      "nombre": "Piña",
+      "precio": 1100,
+      "id": 10
+    },
+    {
+      "nombre": "tequila",
+      "precio": 1222,
+      "id": 11
     }
   ]
 }
