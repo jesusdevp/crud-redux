@@ -1,64 +1,24 @@
 {
   "productos": [
     {
-      "id": 1,
-      "nombre": "Jugo de Zanahoria",
-      "precio": "31111"
+      "nombre": "Jugo de Uvas",
+      "precio": 100,
+      "id": 1
     },
     {
-      "id": 2,
-      "nombre": "Jugo de Naranja",
-      "precio": "1"
+      "nombre": "Verduras",
+      "precio": 150,
+      "id": 2
     },
     {
-      "nombre": "Jugo de Naranja",
-      "precio": "300",
+      "nombre": "tequila",
+      "precio": 33,
       "id": 3
     },
     {
-      "nombre": "Rib Eye 800g",
-      "precio": "200",
+      "nombre": "Comida",
+      "precio": 3000,
       "id": 4
-    },
-    {
-      "nombre": "Jugo de Fresa",
-      "precio": "200",
-      "id": 5
-    },
-    {
-      "nombre": "Uvas",
-      "precio": 455,
-      "id": 6
-    },
-    {
-      "nombre": "Uvas",
-      "precio": 122,
-      "id": 7
-    },
-    {
-      "nombre": "Uvas",
-      "precio": 122,
-      "id": 8
-    },
-    {
-      "nombre": "tequila",
-      "precio": 222,
-      "id": 9
-    },
-    {
-      "nombre": "Piña",
-      "precio": 1100,
-      "id": 10
-    },
-    {
-      "nombre": "tequila",
-      "precio": 1222,
-      "id": 11
-    },
-    {
-      "nombre": "Dulces",
-      "precio": 122,
-      "id": 12
     }
   ]
 }

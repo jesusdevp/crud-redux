@@ -17,6 +17,7 @@ const Products = () => {
 
   // Obtener el state
   const productos = useSelector((state) => state.products.productos);
+  console.log(productos);
   const error = useSelector((state) => state.products.error);
   const cargando = useSelector((state) => state.products.loading);
 
