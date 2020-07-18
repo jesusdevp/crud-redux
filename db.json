@@ -54,6 +54,11 @@
       "nombre": "tequila",
       "precio": 1222,
       "id": 11
+    },
+    {
+      "nombre": "Dulces",
+      "precio": 122,
+      "id": 12
     }
   ]
 }
