@@ -2,23 +2,33 @@
   "productos": [
     {
       "nombre": "Jugo de Uvas",
-      "precio": 100,
+      "precio": "200",
       "id": 1
     },
     {
       "nombre": "Verduras",
-      "precio": 150,
+      "precio": "200",
       "id": 2
-    },
-    {
-      "nombre": "tequila",
-      "precio": 33,
-      "id": 3
     },
     {
       "nombre": "Comida",
       "precio": 3000,
       "id": 4
+    },
+    {
+      "nombre": "Fresas",
+      "precio": 134,
+      "id": 5
+    },
+    {
+      "nombre": "Piña",
+      "precio": 122,
+      "id": 6
+    },
+    {
+      "nombre": "Cereal",
+      "precio": 100,
+      "id": 7
     }
   ]
 }
