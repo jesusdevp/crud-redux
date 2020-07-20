@@ -13,11 +13,12 @@ const Products = () => {
     // Consultar la Api
     const cargarProductos = () => dispatch(obtenerProductosAction());
     cargarProductos();
+    // eslint-disable-next-line
   }, []);
 
   // Obtener el state
   const productos = useSelector((state) => state.products.productos);
-  console.log(productos);
+
   const error = useSelector((state) => state.products.error);
   const cargando = useSelector((state) => state.products.loading);
 
@@ -39,11 +40,15 @@ const Products = () => {
           </tr>
         </thead>
         <tbody>
-          {productos.length === 0
-            ? "No hay productos"
-            : productos.map((producto) => (
-                <Product key={producto.id} producto={producto} />
-              ))}
+          {productos.length === 0 ? (
+            <tr>
+              <td className="mt-3 bg-white">No hay productos</td>
+            </tr>
+          ) : (
+            productos.map((producto) => (
+              <Product key={producto.id} producto={producto} />
+            ))
+          )}
         </tbody>
       </table>
     </Fragment>

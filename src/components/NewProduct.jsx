@@ -4,11 +4,15 @@ import Spinner from "../components/Spinner/Spinner";
 
 // Action de redux
 import { crearNuevoProductoAction } from "../actions/productActions";
+import {
+  mostrarAlertaAction,
+  ocultarAlertaAction,
+} from "../actions/alertActions";
 
 const NewProduct = ({ history }) => {
   // state del componente
   const [nombre, guardarNombre] = useState("");
-  const [precio, guardarPrecio] = useState(0);
+  const [precio, guardarPrecio] = useState("");
 
   // utilizar useDispatch y tcrea una funcion
   const dispatch = useDispatch();
@@ -16,6 +20,7 @@ const NewProduct = ({ history }) => {
   // Acceder al state del store
   const cargando = useSelector((state) => state.products.loading);
   const error = useSelector((state) => state.products.error);
+  const alerta = useSelector((state) => state.alerta.alerta);
 
   // Llamar el action de productActions
   const agregarProducto = (producto) =>
@@ -27,8 +32,17 @@ const NewProduct = ({ history }) => {
 
     // validar formulario
     if (nombre.trim() === "" || precio <= 0) {
+      const alerta = {
+        msg: "Ambos campos son obligatorios",
+        classes: "alert alert-danger text-center text-uppercase p3",
+      };
+      dispatch(mostrarAlertaAction(alerta));
+
       return;
     }
+
+    // Si no hay errores
+    dispatch(ocultarAlertaAction());
 
     // Crear el nuevo producto
     agregarProducto({
@@ -48,6 +62,7 @@ const NewProduct = ({ history }) => {
             <h2 className="text-center mb-4 font-weight-bold">
               Agregar Nuevo Producto
             </h2>
+            {alerta ? <p className={alerta.classes}>{alerta.msg}</p> : null}
             <form onSubmit={submitNuevoProducto}>
               <div className="form-group">
                 <label>Nombre Producto</label>

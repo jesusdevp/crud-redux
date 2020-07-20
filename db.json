@@ -6,12 +6,12 @@
       "id": 1
     },
     {
-      "nombre": "Verduras",
+      "nombre": "Pollo",
       "precio": "200",
       "id": 2
     },
     {
-      "nombre": "Comida",
+      "nombre": "Cena",
       "precio": 3000,
       "id": 4
     },
